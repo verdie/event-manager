@@ -6,15 +6,15 @@ export default class EventForm extends Component{
         <form onSubmit={this.onSubmit}>
         <label>
             Name: 
-            <input type="text" value={this.state.name} onChange={this.onChange}/>
+            <input type="text" value={this.props.name} onChange={this.onChange}/>
         </label>
         <label>
             Date: 
-            <input type="text" value={this.state.date} onChange={this.onChange}/>
+            <input type="text" value={this.props.date} onChange={this.onChange}/>
         </label>
         <label>
             Description: 
-            <input type="text" value={this.state.description} onChange={this.onChange}/>
+            <input type="text" value={this.props.description} onChange={this.onChange}/>
         </label>
             <button type="submit">add event</button>
         </form>
