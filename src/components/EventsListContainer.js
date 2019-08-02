@@ -9,12 +9,16 @@ class EventsListContainer extends React.Component {
   }
 
   render() {
+    console.log('EventsListContainer this.props.events test:', this.props.events)
     return <EventsList events={this.props.events} />
   }
 }
 
-const mapStateToProps = state => ({
-  events: state.events
-})
+const mapStateToProps = state => {
+    console.log('state test:', state)
+    return {
+        events: state.events
+    }
+}
 
 export default connect(mapStateToProps, {loadEvents})(EventsListContainer)

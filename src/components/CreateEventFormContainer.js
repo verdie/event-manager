@@ -5,9 +5,9 @@ import EventForm from './EventForm'
 
 class CreateEventFormContainer extends React.Component {
   state = {
-    name: ' ',
-    date: ' ',
-    description: ' '
+    name: '',
+    date: '',
+    description: ''
   }
 
   onChange = (event) => {
@@ -20,9 +20,9 @@ class CreateEventFormContainer extends React.Component {
     event.preventDefault()
     this.props.createEvent(this.state)
     this.setState({
-      name: ' ',
-      date: ' ',
-      description: ' '
+      name: '',
+      date: '',
+      description: ''
     })
   }
 

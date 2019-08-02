@@ -10,9 +10,9 @@ export default class EventsList extends Component {
                     ? 'Loading...'
                     : <ul>
                         { this.props.events.map(event => 
-                            <li key={event}>
-                                <Link to={ `/events/:id` }>
-                                    {event}
+                            <li key={event.name}>
+                                <Link to={ `/event/${event.id}` }>
+                                    {event.name}
                                 </Link>
                             </li>)
                         }
